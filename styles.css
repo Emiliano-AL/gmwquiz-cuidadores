@@ -1,0 +1,481 @@
+:root {
+  --main-bg-color: #140F4B;
+  --black-color: #3C3C3C;
+  --link-color: #0124E1;
+}
+
+@font-face {
+	font-family: 'Avenir Next World Demi';
+	src: url('../fonts/AvenirNextWorld-Demi.woff2') format('woff2'),
+			url('../fonts/AvenirNextWorld-Demi.woff') format('woff');
+	font-weight: normal;
+	font-style: normal;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: 'Avenir Next World';
+	src: url('../fonts/AvenirNextWorld-Regular.woff2') format('woff2'),
+			url('../fonts/AvenirNextWorld-Regular.woff') format('woff');
+	font-weight: normal;
+	font-style: normal;
+	font-display: swap;
+}
+
+ul{
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+
+
+.startPageQuiz{
+	height: 100vh;
+}
+.logo-medtronic{
+	width: 160px;
+}
+@media (min-width: 768px) {
+	.logo-medtronic{
+		width: auto;
+	}
+}
+.linebottom{
+	border: 1px solid #fff;
+	display: inline-block;
+	width: 100%;
+	margin-top: 4rem;
+}
+@media (min-width: 768px) {
+	.linebottom{
+		border: 2px solid #fff;
+	}
+}
+.bg-main{
+	background-image: url(./images/backgroud.png);
+	background-color: var(--main-bg-color);
+	background-repeat: no-repeat;
+	background-position: top center;
+	background-size: cover;
+}
+@media (min-width: 768px) {
+	.bg-main{
+		background-size: contain;
+	}
+}
+.start-content{
+	height: 60vh;
+
+}
+
+.start-content h3{
+	color: #fff;
+	font-family: 'Avenir Next World';
+	font-style: normal;
+	font-weight: 400;
+	font-size: 24px;
+	text-align: center;
+	margin-bottom: 5rem;
+
+	margin-left: 2rem;
+	margin-right: 2rem;
+}
+@media (min-width: 768px) {
+	.start-content h3{
+		font-size: 36px;
+
+		margin-left: 18rem;
+		margin-right: 18rem;
+	}
+}
+.btn-primary-medtronic{
+	background: linear-gradient(270deg, rgba(1, 36, 225, 0.88) 32.71%, rgba(20, 15, 75, 0.88) 100%);
+	border: 2px solid #FFFFFF;
+	box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+	border-radius: 40px;
+	color: #fff;
+	padding: 0.4rem 1.4rem;
+
+	font-family: 'Avenir Next World';
+	font-style: normal;
+	font-weight: 600;
+	font-size: 24px;
+}
+.btn-primary-medtronic:hover{
+	color: #fff;
+}
+@media (min-width: 768px) {
+	.btn-primary-medtronic{
+		font-size: 36px;
+		padding: 0.8rem 2rem;
+	}
+}
+
+.footer-content{
+	background-color: var(--main-bg-color);
+	position: fixed;
+	left: 0;
+  bottom: 0;
+
+}
+.footer-content p{
+	color: #fff;
+	font-family: 'Avenir Next World';
+	font-style: normal;
+	font-weight: 400;
+	font-size: 11px;
+	margin-bottom: 0;
+	text-align: center;
+}
+@media (min-width: 768px) {
+	.footer-content p{
+		text-align: justify;
+	}
+}
+
+/* Quiz pages */
+.contentPageQuiz{
+	min-height: 100vh;
+}
+.header-wrap{
+	display: flex;
+	width: 100%;
+	padding: 2rem 0;
+}
+.header-wrap > a{
+	width: 10%;
+}
+.header-wrap > div{
+	width: 90%;
+}
+
+.tide-header section.banner-info{
+	padding-left: 0 !important;
+	padding-right: 0 !important;
+	background-color: rgba(185, 185, 186, 0.4);
+}
+section.banner-info span{
+	width: 11.111%;
+	height: 5px;
+}
+@media (min-width: 768px) {
+	section.banner-info span{
+		height: 9px;
+	}
+}
+section.banner-info span.active{
+	background-color: var(--main-bg-color);
+}
+@media (min-width: 768px) {
+	section.banner-info span.active{
+		background-color: var(--link-color);
+	}
+}
+
+.questionwrapper{
+	background: linear-gradient(180deg, #0124E1 0%, #140F4B 162.44%);
+	background-blend-mode: multiply;
+
+	padding: 3rem 3rem 4rem;
+}
+@media (min-width: 768px) {
+	.questionwrapper{
+		background: transparent;
+	}
+}
+.questionwrapper h1{
+	font-family: 'Avenir Next World';
+	font-style: normal;
+	font-weight: 400;
+	font-size: 24px;
+	text-align: center;
+
+	color: #fff;
+}
+@media (min-width: 768px) {
+	.questionwrapper h1{
+		color: var(--link-color);
+		/* width: 40%;
+		padding: 0 5rem; */
+	}
+}
+.image-quiz{
+	width: 50%;
+}
+@media (min-width: 768px) {
+	.image-quiz{
+		width: 80%;
+	}
+}
+.wrapperAnswers > span{
+	font-family: 'Avenir Next World';
+	font-style: normal;
+	font-weight: 400;
+	font-size: 14px;
+	text-align: center;
+	color: var(--black-color);
+
+	padding: 0rem 5rem 1rem;
+	display: block;
+}
+.wrapperAnswers > ul{
+	padding: 1rem 2rem;
+}
+.wrapperImageHead{
+	position: relative;
+	z-index: 10;
+	top: -13px;
+	background: #fff;
+	border-radius: 20px 20px 0 0;
+}
+@media (min-width: 768px) {
+	.wrapperImageHead{
+		position: initial;
+	}
+}
+.wrapperImageHead > img{
+	position: relative;
+  top: -40px;
+}
+@media (min-width: 768px) {
+	.wrapperImageHead > img{
+		/* position: initial; */
+		top: -80px;
+	}
+}
+.wrapperAnswers > ul > li{
+	margin-bottom: 1rem;
+}
+
+.wrapperAnswers label{
+	font-family: 'Avenir Next World';
+	font-style: normal;
+	font-weight: 400;
+	font-size: 15px;
+	color: var(--black-color);
+}
+.bg-bluedark{
+	background-color: var(--main-bg-color);
+}
+@media (min-width: 768px) {
+	.footer-wrapper{
+		position: fixed;
+    bottom: 0;
+    width: 100%;
+	}
+}
+.footer-wrapper p{
+	color: #fff;
+	font-family: 'Avenir Next World';
+	font-style: normal;
+	font-weight: 400;
+	font-size: 11px;
+	margin-bottom: 0;
+	text-align: center;
+}
+.btn-secondary-medtronic{
+	background: linear-gradient(270deg, #0124E1 4.85%, #140F4B 100%);
+	box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+	border-radius: 40px;
+	color: #fff;
+	padding: 0.4rem 2rem;
+
+	font-family: 'Avenir Next World';
+	font-style: normal;
+	font-weight: 400;
+	font-size: 20px;
+	display: flex;
+  align-items: center;
+}
+.btn-secondary-medtronic:hover{
+	color: #fff;
+}
+
+.btn-big-medtronic{
+	background: linear-gradient(270deg, #0124E1 4.85%, #140F4B 100%);
+	box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+	border-radius: 40px;
+	color: #fff;
+	padding: 0.4rem 1rem;
+
+	font-family: 'Avenir Next World';
+	font-style: normal;
+
+	font-weight: 600;
+	font-size: 17px;
+	text-align: center;
+}
+.btn-big-medtronic:hover{
+	color: #fff;
+}
+@media (min-width: 768px) {
+	.btn-big-medtronic{
+		font-weight: 400;
+		font-size: 24px;
+	}
+}
+.btn-outline-medtronic{
+	padding: 0.2rem 4rem;
+
+	font-family: 'Avenir Next World';
+	font-style: normal;
+
+	font-weight: 400;
+	font-size: 17px;
+	text-align: center;
+	border: 1px solid var(--link-color);
+	border-radius: 40px;
+	color: var(--link-color);
+}
+.btn-outline-medtronic:hover{
+	background-color: var(--link-color);
+	color: #fff;
+}
+@media (min-width: 768px) {
+	.btn-outline-medtronic{
+		border: 2px solid var(--link-color);
+		font-size: 24px;
+	}
+}
+
+/* Page results */
+.headPageResult{
+	border-bottom: 1px solid #B9B9BA;
+}
+@media (min-width: 768px) {
+	.headPageResult{
+		border-bottom: 2px solid #B9B9BA;
+	}
+}
+
+.card-medtronic{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+
+	border: 1px solid var(--link-color);
+	box-shadow: 0px 4px 8px 1px rgba(0, 0, 0, 0.25);
+	padding: 2rem;
+	border-radius: 2rem;
+}
+
+.card-medtronic > h2{
+	align-self: flex-start;
+	font-family: 'Avenir Next World';
+	font-style: normal;
+	font-weight: 400;
+	font-size: 24px;
+	color: var(--link-color);
+}
+@media (min-width: 768px) {
+	.card-medtronic > h2{
+		font-size: 40px;
+		margin-left: 3rem;
+    margin-top: 2rem;
+	}
+}
+
+
+
+.card-medtronic .img-card{
+	width: 70%;
+}
+
+.paragraph-card{
+	font-family: 'Avenir Next World';
+	font-style: normal;
+	font-weight: 400;
+	font-size: 15px;
+	margin: 0rem 1rem;
+	color: var(--black-color);
+}
+
+@media (min-width: 768px) {
+	.paragraph-card{
+		order: 2;
+		margin: 2rem 3rem;
+		font-size: 20px;
+	}
+	.img-card{
+		order: 3;
+	}
+	.btnsGroup{
+		order: 4;
+	}
+}
+
+.main-product{
+	width: 60%;
+}
+.wrapperProduct{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+
+	margin-bottom: 2rem;
+}
+.questionTitle{
+	font-family: 'Avenir Next World';
+	font-style: normal;
+	font-weight: 400;
+	font-size: 15px;
+	text-align: center;
+	color: var(--link-color);
+}
+@media (min-width: 768px) {
+	.questionTitle{
+		font-size: 32px;
+		/* color: var(--link-color); */
+		line-height: 145.8%;
+	}
+}
+.footer-result-page p{
+	color: #fff;
+	font-family: 'Avenir Next World';
+	font-style: normal;
+	font-weight: 400;
+	font-size: 11px;
+	margin-bottom: 0;
+	text-align: center;
+}
+
+.wrapper-contact-form p{
+	font-family: 'Avenir Next World';
+	font-style: normal;
+	font-weight: 400;
+	font-size: 14px;
+	line-height: 165.8%;
+	color: var(--black-color);
+}
+@media (min-width: 768px) {
+	.wrapper-contact-form p{
+		font-size: 16px;
+	}
+}
+
+.contact-form label{
+	font-family: 'Avenir Next World';
+	font-style: normal;
+	font-weight: 400;
+	font-size: 20px;
+	color: var(--main-bg-color);
+	margin-bottom: 0;
+	margin-top: .5rem;
+}
+
+.contact-form input[type=text],
+.contact-form input[type=email],
+.contact-form select{
+	border: 2px solid #C2C2C2;
+	border-radius: 14px
+}
+
+.contact-form input[type=text]:focus,
+.contact-form input[type=email]:focus,
+.contact-form select:focus {
+	outline: 0;
+	box-shadow: none;
+}
+.btn-send{
+	padding: .6rem 4rem;
+}

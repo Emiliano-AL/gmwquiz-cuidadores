@@ -1,0 +1,20 @@
+[
+	{
+		"name" : "result_1",
+		"title" : "¡Felicidades!",
+		"image": "imgResult_1",
+		"paragraph" : "Eres un ejemplo a seguir por tu constancia y dedicación para el control y manejo del tratamiento de diabetes de tu pequeño. Eres un cuidador informado que procura que su pequeño no se sienta diferente y acepte la diabetes como un elemento positivo en su vida."
+	},
+	{
+		"name" : "result_2",
+		"title" : "¡Eres un cuidador gurú de la diabetes!",
+		"image": "imgResult_2",
+		"paragraph" : "No sólo llevas un control impecable del tratamiento para la diabetes de tu pequeño, también buscas mantenerte informado día a día con las noticias especializadas en esta condición. Estamos seguros que tu pequeño estará a salvo y vivirá con mayor independencia gracias a tu esfuerzo."
+	},
+	{
+		"name" : "result_3",
+		"title" : "¡Eres un gran cuidador!",
+		"image": "imgResult_3",
+		"paragraph" : "A pesar de los retos que implican cuidar a un pequeño con diabetes, has logrado llevar un buen control de su diabetes y eso es admirable."
+	}
+]

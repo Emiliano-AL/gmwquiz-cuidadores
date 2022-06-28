@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+	<link rel="stylesheet" type="text/css" href="./styles.css" />
+	<title>Quiz Metronic</title>
+</head>
+<body data-pagename="quiz" data-currentquestion="0" id="mainPageQuiz" class="page container-fluid contentPageQuiz">
+	<section class="container">
+		<div class="col-12">
+			<nav class="header-wrap">
+				<a class="" href="#">
+					<img src="./images/ic_chevron.png" alt="">
+				</a>
+				<div class="text-center">
+					<img src="./images/logoMetronic-blue.png" class="img-fluid" alt="">
+				</div>
+			</nav>
+		</div>
+	</section>
+	<div class="row px-0 tide-header">
+		<section id="slideInfo" class="d-flex banner-info">
+			<span class="active"></span>
+			<span></span>
+			<span></span>
+			<span></span>
+			<span></span>
+			<span></span>
+			<span></span>
+			<span></span>
+		</section>
+	</div>
+	<div class="container px-0">
+		<section class="row py-md-5">
+			<div class="col-12 col-md-6 questionwrapper">
+				<h1 id="questionContent"></h1>
+			</div>
+
+			<div class="col-md-6"> </div>
+
+			<div class="col-12 order-md-2 col-md-6 d-flex justify-content-center wrapperImageHead">
+				<img id="quizImg" class="img-fluid image-quiz" src="./images/imgQuiz_0.png" alt="">
+			</div>
+
+			<div class="col-12 order-md-1 col-md-6 wrapperAnswers">
+				<span id="instructions">Haz clic en la opción que más se adecúe a ti.</span>
+				<ul id="wrapperAnswersList"> </ul>
+				<div class="d-flex justify-content-center my-4">
+					<button id="nextQuestion" class="btn btn-secondary-medtronic">
+						<span>Siguiente</span>
+						<img src="./images/ic_chevron_right.png" alt="">
+					</button>
+					<a id="showResults" href="results.html" class="btn btn-secondary-medtronic d-none">
+						<span>Ver resultados</span>
+					</a>
+				</div>
+			</div>
+		</section>
+	</div>
+	<footer class="row footer-wrapper px-0 bg-bluedark py-4">
+		<div class="col-12 d-flex justify-content-center align-items-center flex-column">
+			<p>
+				© 2022 Medtronic. Reservados todos los derechos. Medtronic, el logotipo de Medtronic y Engeniaría para el extraordinario son marcas comerciales de Medtronic.
+			</p>
+			<p>
+				Las marcas de terceros son marcas comerciales de sus respectivos propietarios. Todas las demás marcas son marcas comerciales de una compañía de Medtronic.
+			</p>
+		</div>
+	</footer>
+
+	<script src="./dist/main.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+	<script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+</body>
+</html>
