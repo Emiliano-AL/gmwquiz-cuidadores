@@ -17,13 +17,13 @@ const handleChange = ( question, answer) => {
 	if(anwswersToQuestions.find( res => res.questionId == question)){
 		for(let i = 0; anwswersToQuestions.length > i; i++){
 			if(anwswersToQuestions[i].questionId == question){
-				anwswersToQuestions[i].anwswer = answer;
+				anwswersToQuestions[i].answer = answer;
 			}
 		}
 	}else{
 		anwswersToQuestions.push({
 			questionId: question,
-			anwswer: answer
+			answer: answer
 		});
 	}
 }
@@ -121,8 +121,7 @@ export const startQuiz = async () => {
 		if(!e.target.classList.contains('anwschk')){
 			return;
 		}
-		// console.log(Number(e.target.dataset.question));
-		// console.log(Number(e.target.dataset.weight));
-		handleChange(Number(e.target.dataset.question), Number(e.target.dataset.weight));
+
+		handleChange(Number(e.target.dataset.question), e.target.dataset.weight);
 	});
 }

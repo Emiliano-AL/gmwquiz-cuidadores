@@ -7,17 +7,17 @@
 			{
 				"id": "111-a",
 				"content": "Lo frecuentamos regularmente, mínimo una vez cada tres meses",
-				"weight": 1
+				"weight": "a"
 			},
 			{
 				"id": "111-b",
 				"content": "Cada que sea necesario además de las citas programadas",
-				"weight": 2
+				"weight": "b"
 			},
 			{
 				"id": "111-c",
 				"content": "Dos veces por año, cuando es indispensable o si el especialista lo indica",
-				"weight": 3
+				"weight": "c"
 			}
 		]
 	},
@@ -29,17 +29,17 @@
 			{
 				"id": "112-a",
 				"content": "Sí, es esencial mantenerme informado y compartir la información con mi pequeño",
-				"weight": 1
+				"weight": "a"
 			},
 			{
 				"id": "112-b",
 				"content": "Regularmente busco noticias sobre diabetes, le enseño a mi hijo que la investigación e innovación son muy importantes para su tratamiento",
-				"weight": 2
+				"weight": "b"
 			},
 			{
 				"id": "112-c",
 				"content": "Prefiero mantenerme lejos de las noticias para no sentir presión acerca de la salud de mi pequeño",
-				"weight": 3
+				"weight": "c"
 			}
 		]
 	},
@@ -51,17 +51,17 @@
 			{
 				"id": "113-a",
 				"content": "Sí, conozco bastante sobre algunos tratamientos y dispositivos (puertos de insulina, sistemas de monitoreo de glucosa, bombas de insulina, etc.)",
-				"weight": 1
+				"weight": "a"
 			},
 			{
 				"id": "113-b",
 				"content": "Conozco a detalle los dispositivos que ayudan a mejorar el control de la diabetes porque mi pequeño es o ha sido usuario",
-				"weight": 2
+				"weight": "b"
 			},
 			{
 				"id": "113-c",
 				"content": "He oído hablar de ellas, pero en realidad no hemos tenido oportunidad de probar o acceder a alguna otra tecnología más allá de inyecciones",
-				"weight": 3
+				"weight": "c"
 			}
 		]
 	},
@@ -73,17 +73,17 @@
 			{
 				"id": "114-a",
 				"content": "Sigo las indicaciones del médico, pero a veces le permito libertades para que no se sienta presionado o diferente",
-				"weight": 1
+				"weight": "a"
 			},
 			{
 				"id": "114-b",
 				"content": "La dieta de mi hijo es rigurosa, siguiendo los consejos del especialista en nutrición. Tratamos de seguir sus recomendaciones toda la familia",
-				"weight": 2
+				"weight": "b"
 			},
 			{
 				"id": "114-c",
 				"content": "Procuro que la alimentación de mi hijo sea balanceada y sin excesos, monitoreando todo el día su consumo",
-				"weight": 3
+				"weight": "c"
 			}
 		]
 	},
@@ -95,17 +95,17 @@
 			{
 				"id": "115-a",
 				"content": "Es una oportunidad de mejorar sus hábitos diarios y los de toda la familia",
-				"weight": 1
+				"weight": "a"
 			},
 			{
 				"id": "115-b",
 				"content": "La diabetes nos ha mostrado que somos capaces de superar cualquier reto",
-				"weight": 2
+				"weight": "b"
 			},
 			{
 				"id": "115-c",
 				"content": "Cuidar a un pequeño con diabetes cambia tu modo de vida, es un reto complicado que requiere atención en cualquier momento del día",
-				"weight": 3
+				"weight": "c"
 			}
 		]
 	},
@@ -118,17 +118,17 @@
 			{
 				"id": "116-a",
 				"content": "De uno a tres",
-				"weight": 1
+				"weight": "a"
 			},
 			{
 				"id": "116-b",
 				"content": "Más de tres",
-				"weight": 2
+				"weight": "b"
 			},
 			{
 				"id": "116-c",
 				"content": "Mi hijo desarrolló diabetes T2 y la controlamos con medicamento",
-				"weight": 3
+				"weight": "c"
 			}
 		]
 	},
@@ -140,17 +140,17 @@
 			{
 				"id": "117-a",
 				"content": "Sí, el gobierno de mi país me apoya con los gastos",
-				"weight": 1
+				"weight": "a"
 			},
 			{
 				"id": "117-b",
 				"content": "No, yo me hago cargo de los gastos",
-				"weight": 2
+				"weight": "b"
 			},
 			{
 				"id": "117-c",
 				"content": "Sí podría solicitar apoyo pero prefiero hacerlo por mi cuenta para llevarlo en tiempo y forma sin ninguna condicionante",
-				"weight": 3
+				"weight": "c"
 			}
 		]
 	},
@@ -162,22 +162,22 @@
 			{
 				"id": "118-a",
 				"content": "Sí, tengo un seguro de gastos médicos particular, yo absorbo el gasto",
-				"weight": 1
+				"weight": "a"
 			},
 			{
 				"id": "118-b",
 				"content": "No, nosotros recibimos apoyo de las entidades públicas de mi país",
-				"weight": 2
+				"weight": "b"
 			},
 			{
 				"id": "118-c",
 				"content": "Cuento con un seguro de gastos médicos particular y así mismo, utilizo regulamos los servicios médicos públicos de nuestro país",
-				"weight": 3
+				"weight": "c"
 			},
 			{
-				"id": "119-c",
+				"id": "118-d",
 				"content": "No cuento con ninguno de los 2, absorbo todos los gastos",
-				"weight": 4
+				"weight": "d"
 			}
 		]
 	}
