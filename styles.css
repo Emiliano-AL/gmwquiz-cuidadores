@@ -60,7 +60,7 @@ ul{
 }
 @media (min-width: 768px) {
 	.bg-main{
-		background-size: contain;
+		background-size: cover;
 	}
 }
 .start-content{
@@ -462,9 +462,16 @@ section.banner-info span.active{
 	margin-bottom: 0;
 	margin-top: .5rem;
 }
+.form-check-label{
+	font-size: 16px !important;
+}
+.contact-form input[type=checkbox]{
+	margin-top: 0.9rem;
+}
 
 .contact-form input[type=text],
 .contact-form input[type=email],
+.contact-form input[type=tel],
 .contact-form select{
 	border: 2px solid #C2C2C2;
 	border-radius: 14px
@@ -472,6 +479,7 @@ section.banner-info span.active{
 
 .contact-form input[type=text]:focus,
 .contact-form input[type=email]:focus,
+.contact-form input[type=tel]:focus,
 .contact-form select:focus {
 	outline: 0;
 	box-shadow: none;

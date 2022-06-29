@@ -100,7 +100,7 @@ const loadQuestions = async () => {
 
 const handleResultsClick = () => {
 	localStorage.setItem('answersQuiz', JSON.stringify(anwswersToQuestions));
-	console.log(anwswersToQuestions);
+	// console.log(anwswersToQuestions);
 // 	location.href ="http://www.pagina1.com";
 }
 
