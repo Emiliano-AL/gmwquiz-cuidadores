@@ -58,7 +58,7 @@
 					</div>
 					<div class="mb-2">
 						<label for="phone" class="form-label">Teléfono*</label>
-						<input type="text" class="form-control" id="phone"  >
+						<input type="tel" class="form-control" id="phone"  >
 					</div>
 					<div class="mb-2">
 						<label for="city" class="form-label">Ciudad*</label>
@@ -71,42 +71,80 @@
 					<div class="mb-2">
 						<label for="contactme" class="form-label">¿Cómo prefieres ser contactado?*</label>
 						<select id="contactme" class="form-select">
-							<option>Disabled select</option>
+							<option>Elige una opción</option>
+							<option value="Correo electrónico">Correo electrónico</option>
+							<option value="Teléfono">Teléfono</option>
 						</select>
 					</div>
 					<div class="mb-2">
 						<label for="iam" class="form-label">Soy*</label>
 						<select id="iam" class="form-select">
-							<option>Disabled select</option>
+							<option>Elige una opción</option>
+							<option value="Paciente">Paciente</option>
+							<option value="Familiar">Familiar</option>
+							<option value="Médico">Médico</option>
 						</select>
 					</div>
 					<div class="mb-2">
 						<label for="howHandle" class="form-label">¿Cómo manejas tu diabetes?</label>
 						<select id="howHandle" class="form-select">
-							<option>Disabled select</option>
+							<option>Elige una opción</option>
+							<option value="3 o más inyecciones de insulina al día">3 o más inyecciones de insulina al día</option>
+							<option value="2 inyecciones de insulina al día">2 inyecciones de insulina al día</option>
+							<option value="No aplica">No aplica</option>
 						</select>
 					</div>
 					<div class="mb-2">
 						<label for="hasSure" class="form-label">¿Cuentas con seguro de gastos médicos mayores?</label>
 						<select id="hasSure" class="form-select">
-							<option>Disabled select</option>
+							<option>Elige una opción</option>
+							<option value="Sí">Sí</option>
+							<option value="No">No</option>
 						</select>
 					</div>
 					<div class="mb-2">
 						<label for="tratamientoPor" class="form-label">Estás siendo tratado por:</label>
 						<select id="tratamientoPor" class="form-select">
-							<option>Disabled select</option>
+							<option>Elige una opción</option>
+							<option value="Endocrinólogo">Endocrinólogo</option>
+							<option value="Médico General">Médico General</option>
+							<option value="Otro">Otro</option>
 						</select>
 					</div>
 					<div class="mb-2">
 						<label for="type" class="form-label">Tipo de diabetes</label>
 						<select id="type" class="form-select">
-							<option>Disabled select</option>
+							<option>Elige una opción</option>
+							<option value="Tipo 1">Tipo 1</option>
+							<option value="Tipo 2">Tipo 2</option>
+							<option value="Gestacional">Gestacional</option>
 						</select>
 					</div>
 					<div class="mb-2">
 						<label for="other" class="form-label">Otro</label>
 						<input type="text" class="form-control" id="other">
+					</div>
+
+					<div class="form-check mb-2">
+						<input class="form-check-input" type="checkbox" value="" id="agree_1">
+						<label class="form-check-label" for="agree_1">
+							He leído y entiendo los términos de esta autorización de marketing. Autorizo voluntariamente a Medtronic el uso de esta información para los motivos descritos en la autorización.
+							<a data-bs-toggle="modal" data-bs-target="#agreeModal1" href="#">Leer más</a>
+						</label>
+					</div>
+					<div class="form-check mb-2">
+						<input class="form-check-input" type="checkbox" value="" id="agree_2">
+						<label class="form-check-label" for="agree_2">
+							Acepto recibir llamadas telefónicas y/o mensajes pregrabados utilizando tecnología automatizada por parte de Medtronic al teléfono provisto más arriba.
+							<a data-bs-toggle="modal" data-bs-target="#agreeModal2" href="#">Leer más</a>
+						</label>
+					</div>
+					<div class="form-check mb-2">
+						<input class="form-check-input" type="checkbox" value="" id="agree_3">
+						<label class="form-check-label" for="agree_3">
+							Acepto recibir comunicaciones de texto utilizando tecnología automatizada por parte de Medtronic Diabetes al teléfono celular provisto más arriba (la frecuencia de los mensajes puede variar).
+							<a data-bs-toggle="modal" data-bs-target="#agreeModal3" href="#">Leer más</a>
+						</label>
 					</div>
 
 					<div class="d-flex justify-content-center">
@@ -133,6 +171,83 @@
 			</p>
 		</div>
 	</footer>
+
+	<!-- Modal -->
+	<div class="modal fade" id="agreeModal1" tabindex="-1" aria-labelledby="agreeModal1Label" aria-hidden="true">
+		<div class="modal-dialog modal-lg">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h5 class="modal-title" id="agreeModal1Label">AUTORIZACIÓN PARA EL USO DE INFORMACIÓN DE SALUD PROTEGIDA</h5>
+					<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+				</div>
+				<div class="modal-body">
+					<p>
+						Usted autoriza a Medtronic MiniMed, Inc., que desarrolla sus actividades comerciales bajo el nombre de Medtronic Diabetes, o a sus subsidiarias, contratistas o representantes a utilizar su información personal, incluidas entre otras su información de contacto e información de salud, con fines de comercialización, y a dar a conocer dicha información a los representantes y contratistas de Medtronic. Usted puede recibir, entre otros, información sobre: (a) productos, tratamientos o servicios de Medtronic Diabetes; (b) ofertas de comercialización y promocionales; (c) preguntas sobre su experiencia con los productos, tratamientos y servicios de Medtronic Diabetes; y/o (d) sugerencias sobre cómo Medtronic Diabetes puede mejorar la atención al cliente.
+					</p>
+					<p>
+						La presente autorización caducará (i) tres (3) años después de la fecha de envío de esta autorización electrónica o (ii) de la última fecha en la que recibió los productos o servicios de Medtronic, la que sea posterior, pero es posible que caduque antes si decide revocarla según las instrucciones que se incluyen más abajo.
+					</p>
+					<p>
+						Usted tiene derecho a revocar esta autorización en cualquier momento mediante (i) el envío de un correo electrónico a rs.diabeteslatam@medtronic.com; La revocación no afectará las acciones que Medtronic Diabetes ya haya realizado en relación con esta autorización. El destinatario de la información divulgada en virtud de esta autorización puede volver a divulgarla, y es posible que esa información deje de contar con la protección de las normas federales de privacidad.
+					</p>
+					<p>
+						Usted tiene derecho a negarse a firmar esta autorización. La negativa a firmarla no afectará su elegibilidad para un tratamiento o seguro médico o los beneficios relacionados.
+					</p>
+					<p>
+						¿Tiene preguntas? Llame a nuestro Centro de atención al cliente de su país o envíe un correo electrónico a rs.diabeteslatam@medtronic.com.
+					</p>
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Ok</button>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!-- Modal -->
+	<div class="modal fade" id="agreeModal2" tabindex="-1" aria-labelledby="agreeModalLabel" aria-hidden="true">
+		<div class="modal-dialog modal-lg">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h5 class="modal-title" id="agreeModalLabel">CONSENTIMIENTO PARA RECIBIR LLAMADOS TELEFÓNICOS</h5>
+					<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+				</div>
+				<div class="modal-body">
+					<p>
+						Usted acepta recibir llamados telefónicos, incluidos los llamados pregrabados o automáticos, de Medtronic MiniMed Inc., que desarrolla sus actividades comerciales bajo el nombre de Medtronic Diabetes, o en representación de dicha empresa, a los números telefónicos indicados arriba mediante tecnología automática, en referencia a la comercialización, la promoción y/o las ofertas de venta de los productos, tratamientos y servicios de Medtronic Diabetes. Asimismo, certifica que (a) tiene 18 años de edad o más y (b) autoriza y acepta el uso de la información proporcionada para que Medtronic Diabetes se comunique con usted. Su consentimiento no es una condición de compra. Pueden aplicarse tarifas por tiempo de llamada, mensajes y datos. Usted tiene derecho a revocar esta autorización en cualquier momento mediante (i) el envío de un correo electrónico a rs.diabeteslatam@medtronic.com; la revocación no afectará las acciones que Medtronic Diabetes ya haya realizado en relación con esta autorización.
+					</p>
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Ok</button>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!-- Modal -->
+	<div class="modal fade" id="agreeModal3" tabindex="-1" aria-labelledby="agreeModal3Label" aria-hidden="true">
+		<div class="modal-dialog modal-lg">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h5 class="modal-title" id="agreeModal3Label">CONSENTIMIENTO PARA RECIBIR MENSAJES DE TEXTO</h5>
+					<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+				</div>
+				<div class="modal-body">
+					<p>
+						Usted acepta recibir mensajes de texto de Medtronic MiniMed Inc., que desarrolla sus actividades comerciales bajo el nombre de Medtronic Diabetes, o en representación de dicha empresa, a los números telefónicos indicados arriba mediante tecnología automática, en referencia a la comercialización, la promoción y/o las ofertas de venta de los productos, tratamientos y servicios de Medtronic Diabetes. Asimismo, certifica que (a) tiene 18 años de edad o más y (b) autoriza y acepta el uso de la información proporcionada para que Medtronic Diabetes se comunique con usted. Su consentimiento no es una condición de compra.
+					</p>
+					<p>
+						Pueden aplicarse tarifas por tiempo de llamada, mensajes y datos. Usted puede optar por dejar de recibir estas comunicaciones en cualquier momento mediante
+						<br> (i) una respuesta al mensaje de texto con la palabra “STOP”; o
+						<br> (ii) el envío de un correo electrónico a rs.diabeteslatam@medtronic.com
+					</p>
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Ok</button>
+				</div>
+			</div>
+		</div>
+	</div>
 
 	<script src="./dist/main.js"></script>
 	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
