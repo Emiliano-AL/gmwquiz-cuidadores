@@ -11,6 +11,7 @@ const slideInfo = document.getElementById('slideInfo');
 const questionContent = document.getElementById('questionContent');
 const instructions = document.getElementById('instructions');
 const wrapperAnswers = document.getElementById('wrapperAnswersList');
+const backBtn = document.getElementById('backBtn');
 
 const handleChange = ( question, answer) => {
 	// console.log(chk)
@@ -69,13 +70,15 @@ const handleNextClick = () => {
 	const currentNmbrQuestion = Number(wrapperQuestion.dataset.currentquestion);
 	if(currentNmbrQuestion == 0){
 		currentQuestion = listQuestions[currentNmbrQuestion];
-		// console.log(currentNmbrQuestion);
 		renderNextQuestion(currentNmbrQuestion);
+		backBtn.classList.add('d-none');
 		return;
 	}
 
 	if(checkHasSlctdAns()){
 		currentQuestion = listQuestions[currentNmbrQuestion];
+		if(currentNmbrQuestion > 0 )
+			backBtn.classList.remove('d-none');
 		//Render Next Question
 		renderNextQuestion(currentNmbrQuestion);
 	}else{
@@ -100,8 +103,6 @@ const loadQuestions = async () => {
 
 const handleResultsClick = () => {
 	localStorage.setItem('answersQuiz', JSON.stringify(anwswersToQuestions));
-	// console.log(anwswersToQuestions);
-// 	location.href ="http://www.pagina1.com";
 }
 
 if(nextQuestionBtn)
@@ -123,5 +124,9 @@ export const startQuiz = async () => {
 		}
 
 		handleChange(Number(e.target.dataset.question), e.target.dataset.weight);
+	});
+
+	backBtn.addEventListener('click', (e) => {
+		console.log("render next question...");
 	});
 }

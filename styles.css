@@ -37,7 +37,7 @@ ul{
 }
 @media (min-width: 768px) {
 	.logo-medtronic{
-		width: auto;
+		width: 220px;
 	}
 }
 .linebottom{
@@ -82,12 +82,28 @@ ul{
 }
 @media (min-width: 768px) {
 	.start-content h3{
+		font-size: 30px;
+
+		margin-left: 7rem;
+		margin-right: 7rem;
+	}
+}
+@media (min-width: 992px) {
+	.start-content h3{
 		font-size: 36px;
+		margin-left: 11rem;
+		margin-right: 11rem;
+	}
+}
+@media (min-width: 1200px) {
+	.start-content h3{
+		/* font-size: 36px; */
 
 		margin-left: 18rem;
 		margin-right: 18rem;
 	}
 }
+
 .btn-primary-medtronic{
 	background: linear-gradient(270deg, rgba(1, 36, 225, 0.88) 32.71%, rgba(20, 15, 75, 0.88) 100%);
 	border: 2px solid #FFFFFF;
@@ -149,6 +165,10 @@ ul{
 	width: 90%;
 }
 
+.wrapper-logo-quiz a img{
+	width: 110px;
+}
+
 .tide-header section.banner-info{
 	padding-left: 0 !important;
 	padding-right: 0 !important;
@@ -181,6 +201,17 @@ section.banner-info span.active{
 @media (min-width: 768px) {
 	.questionwrapper{
 		background: transparent;
+		padding: 0rem 3rem 0rem;
+	}
+}
+@media (min-width: 992px) {
+	.questionwrapper{
+		padding: 1rem 3rem 1rem;
+	}
+}
+@media (min-width: 1200px) {
+	.questionwrapper{
+		padding: 3rem 3rem 4rem;
 	}
 }
 .questionwrapper h1{
@@ -204,7 +235,20 @@ section.banner-info span.active{
 }
 @media (min-width: 768px) {
 	.image-quiz{
-		width: 80%;
+		width: 350px;
+		height: 350px;
+	}
+}
+@media (min-width: 992px) {
+	.image-quiz{
+		width: 400px;
+		height: 400px;
+	}
+}
+
+@media (min-width: 992px) {
+	.wrapperAnswers{
+		margin-bottom: 3rem;
 	}
 }
 .wrapperAnswers > span{
@@ -225,8 +269,6 @@ section.banner-info span.active{
 	position: relative;
 	z-index: 10;
 	top: -13px;
-	background: #fff;
-	border-radius: 20px 20px 0 0;
 }
 @media (min-width: 768px) {
 	.wrapperImageHead{
@@ -238,6 +280,12 @@ section.banner-info span.active{
   top: -40px;
 }
 @media (min-width: 768px) {
+	.wrapperImageHead > img{
+		/* position: initial; */
+		top: -40px;
+	}
+}
+@media (min-width: 992px) {
 	.wrapperImageHead > img{
 		/* position: initial; */
 		top: -80px;
@@ -257,7 +305,18 @@ section.banner-info span.active{
 .bg-bluedark{
 	background-color: var(--main-bg-color);
 }
+
 @media (min-width: 768px) {
+	.main-body-quiz{
+		min-height: 78vh;
+	}
+}
+
+@media (min-width: 992px) {
+	.main-body-quiz{
+		min-height: auto;
+	}
+
 	.footer-wrapper{
 		position: fixed;
     bottom: 0;
@@ -311,6 +370,12 @@ section.banner-info span.active{
 @media (min-width: 768px) {
 	.btn-big-medtronic{
 		font-weight: 400;
+		font-size: 20px;
+	}
+}
+@media (min-width: 1200px) {
+	.btn-big-medtronic{
+		font-weight: 400;
 		font-size: 24px;
 	}
 }
@@ -334,6 +399,11 @@ section.banner-info span.active{
 @media (min-width: 768px) {
 	.btn-outline-medtronic{
 		border: 2px solid var(--link-color);
+		font-size: 20px;
+	}
+}
+@media (min-width: 1200px) {
+	.btn-outline-medtronic{
 		font-size: 24px;
 	}
 }
@@ -369,6 +439,20 @@ section.banner-info span.active{
 }
 @media (min-width: 768px) {
 	.card-medtronic > h2{
+		font-size: 30px;
+		margin-left: 1rem;
+    margin-top: 1rem;
+	}
+}
+@media (min-width: 992px) {
+	.card-medtronic > h2{
+		font-size: 35px;
+		margin-left: 1rem;
+    margin-top: 1rem;
+	}
+}
+@media (min-width: 1200px) {
+	.card-medtronic > h2{
 		font-size: 40px;
 		margin-left: 3rem;
     margin-top: 2rem;
@@ -393,7 +477,7 @@ section.banner-info span.active{
 @media (min-width: 768px) {
 	.paragraph-card{
 		order: 2;
-		margin: 2rem 3rem;
+		/* margin: 2rem 3rem; */
 		font-size: 20px;
 	}
 	.img-card{
@@ -403,6 +487,23 @@ section.banner-info span.active{
 		order: 4;
 	}
 }
+
+@media (min-width: 768px) {
+	.paragraph-card{
+		margin: 1rem 1rem;
+	}
+}
+@media (min-width: 992px) {
+	.paragraph-card{
+		margin: 1rem 1rem;
+	}
+}
+@media (min-width: 1200px) {
+	.paragraph-card{
+		margin: 2rem 3rem;
+	}
+}
+
 
 .main-product{
 	width: 60%;
@@ -423,6 +524,13 @@ section.banner-info span.active{
 	color: var(--link-color);
 }
 @media (min-width: 768px) {
+	.questionTitle{
+		font-size: 28px;
+		/* color: var(--link-color); */
+		line-height: 115%;
+	}
+}
+@media (min-width: 1200px) {
 	.questionTitle{
 		font-size: 32px;
 		/* color: var(--link-color); */
