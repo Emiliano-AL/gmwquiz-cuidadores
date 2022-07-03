@@ -29,27 +29,64 @@ const handleChange = ( question, answer) => {
 	}
 }
 
+const renderAnswersUI = (currentResponse = false) => {
+	wrapperAnswers.innerHTML = ``;
+	currentQuestion.anwswers.map( ans => {
+		const liItem = document.createElement('li');
+		const wrapDiv = document.createElement("div");
+		const chkInput = document.createElement("input");
+		chkInput.type = "radio";
+		chkInput.name = "question-" + currentQuestion.id;
+		chkInput.id = ans.id;
+		chkInput.dataset.weight = ans.weight;
+		if(currentResponse && (currentResponse.answer == ans.weight)){
+			chkInput.checked = true;
+		}
+		chkInput.dataset.question = currentQuestion.id;
+		chkInput.classList.add("anwschk");
+		chkInput.classList.add("form-check-input");
+		const chkLabel = document.createElement("label");
+		chkLabel.classList.add("form-check-label");
+		chkLabel.setAttribute("for", ans.id);
+		chkLabel.textContent = ans.content;
+
+		wrapDiv.classList.add("form-check");
+		wrapDiv.appendChild(chkInput);
+		wrapDiv.appendChild(chkLabel);
+		liItem.appendChild(wrapDiv);
+		wrapperAnswers.appendChild(liItem);
+	});
+}
+
+const renderPrevQuestion = (prevNmbrQues) => {
+	quizImg.src = `./images/imgQuiz_${prevNmbrQues}.png`;
+	questionContent.textContent = currentQuestion.question;
+	wrapperQuestion.dataset.currentquestion = prevNmbrQues;
+
+	if(prevNmbrQues >= 0){
+		// instructions.hidden = true;
+		slideInfo.children[prevNmbrQues + 1].classList.remove('active');
+	}
+
+	slideInfo.children[prevNmbrQues].classList.add('active');
+	const currentResp = anwswersToQuestions.find( res => res.questionId == currentQuestion.id);
+	renderAnswersUI(currentResp);
+}
+
+
 const renderNextQuestion = (crrntNmbrQues) => {
 	quizImg.src = `./images/imgQuiz_${crrntNmbrQues}.png`;
 	questionContent.textContent = currentQuestion.question;
+	wrapperQuestion.dataset.currentindex = crrntNmbrQues;
 	wrapperQuestion.dataset.currentquestion = crrntNmbrQues + 1;
 	if(crrntNmbrQues > 0){
 		instructions.hidden = true;
 		slideInfo.children[crrntNmbrQues - 1].classList.remove('active');
 	}
 	slideInfo.children[crrntNmbrQues].classList.add('active');
-	wrapperAnswers.innerHTML = ``;
-	currentQuestion.anwswers.map( ans => {
-		wrapperAnswers.innerHTML += `<li>
-			<div class="form-check">
-				<input
-					data-weight="${ans.weight}"
-					data-question="${currentQuestion.id}" class="form-check-input anwschk" type="radio"
-					name="question-${currentQuestion.id}" id="${ans.id}">
-				<label class="form-check-label" for="${ans.id}">${ans.content}</label>
-			</div>
-		</li>`;
-	});
+
+	const currentResp = anwswersToQuestions.find( res => res.questionId == currentQuestion.id);
+	renderAnswersUI(currentResp);
 
 	if((Number(wrapperQuestion.dataset.currentquestion) + 1) > listQuestions.length){
 		showResultsBtn.classList.remove('d-none');
@@ -127,6 +164,14 @@ export const startQuiz = async () => {
 	});
 
 	backBtn.addEventListener('click', (e) => {
-		console.log("render next question...");
+		e.preventDefault();
+		const prevIndxQuestion = Number(wrapperQuestion.dataset.currentindex) - 1;
+		currentQuestion = listQuestions[prevIndxQuestion];
+		if(prevIndxQuestion === 0){
+			backBtn.classList.add('d-none');
+		}
+		renderPrevQuestion(prevIndxQuestion);
+		wrapperQuestion.dataset.currentindex = prevIndxQuestion;
+		wrapperQuestion.dataset.currentquestion = prevIndxQuestion + 1;
 	});
 }
