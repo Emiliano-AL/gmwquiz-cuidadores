@@ -6,8 +6,8 @@
 
 @font-face {
 	font-family: 'Avenir Next World Demi';
-	src: url('../fonts/AvenirNextWorld-Demi.woff2') format('woff2'),
-			url('../fonts/AvenirNextWorld-Demi.woff') format('woff');
+	src: url('./fonts/AvenirNextWorld-Demi.woff2') format('woff2'),
+			url('./fonts/AvenirNextWorld-Demi.woff') format('woff');
 	font-weight: normal;
 	font-style: normal;
 	font-display: swap;
@@ -15,8 +15,8 @@
 
 @font-face {
 	font-family: 'Avenir Next World';
-	src: url('../fonts/AvenirNextWorld-Regular.woff2') format('woff2'),
-			url('../fonts/AvenirNextWorld-Regular.woff') format('woff');
+	src: url('./fonts/AvenirNextWorld-Regular.woff2') format('woff2'),
+			url('./fonts/AvenirNextWorld-Regular.woff') format('woff');
 	font-weight: normal;
 	font-style: normal;
 	font-display: swap;

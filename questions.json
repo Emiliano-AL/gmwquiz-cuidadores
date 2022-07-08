@@ -127,8 +127,13 @@
 			},
 			{
 				"id": "116-c",
-				"content": "Mi hijo desarrolló diabetes T2 y la controlamos con medicamento",
+				"content": "Mi hijo desarrolló diabetes T2 y buscamos nuevos tramientos",
 				"weight": "c"
+			},
+			{
+				"id": "116-d",
+				"content": "No necesita pinchazos (inyecciones), la controlamos con medicamento",
+				"weight": "d"
 			}
 		]
 	},
@@ -161,7 +166,7 @@
 		"anwswers": [
 			{
 				"id": "118-a",
-				"content": "Sí, tengo un seguro de gastos médicos particular, yo absorbo el gasto",
+				"content": "Sí, tengo un seguro de gastos médicos particular, yo asumo el gasto",
 				"weight": "a"
 			},
 			{
@@ -176,7 +181,7 @@
 			},
 			{
 				"id": "118-d",
-				"content": "No cuento con ninguno de los 2, absorbo todos los gastos",
+				"content": "No cuento con ninguno de los 2, asumo todos los gastos",
 				"weight": "d"
 			}
 		]

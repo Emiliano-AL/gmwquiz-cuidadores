@@ -2,8 +2,9 @@
 const titleResult = document.getElementById('titleResult');
 const paragraphCard = document.getElementById('paragraphCard');
 const imageCard = document.getElementById('imageCard');
-const mainProduct = document.getElementsByClassName('main-product');
+// const mainProduct = document.getElementsByClassName('main-product');
 const quizFormCuidadores = document.getElementById('quiz-cuidadores');
+const nameMedtronicProduct = document.getElementById('nameMedtronicProduct');
 
 const isMailValid = (valor) => {
 	const re=/^([\da-z_\.-]+)@([\da-z\.-]+)\.([a-z\.]{2,6})$/
@@ -84,22 +85,61 @@ const processResults = (listAnswers) => {
 	return maxResult.name;
 }
 
-const renderResultsUI = (typeResult, listResults) => {
+const renderResultsUI = (typeResult, listResults, country) => {
 	const resultInfo = listResults.find( x => x.name === typeResult);
 	// console.log(resultInfo);
+	nameMedtronicProduct.textContent = infoByCountry(country);
 
 	imageCard.src = `./images/${resultInfo.image}.png`;
 	titleResult.textContent = resultInfo.title;
 	paragraphCard.textContent = resultInfo.paragraph;
 }
 
-export const showResults = async () => {
+const infoByCountry = (country) => {
+	const informationByCountry = [
+		{
+			country : "ar",
+			product : "MiniMed™ 670G",
+		},
+		{
+			country : "br",
+			product : "MiniMed™ 670G",
+		},
+		{
+			country : "cl",
+			product : "MiniMed™ 780G",
+		},
+		{
+			country : "do",
+			product : "MiniMed™ 670G",
+		},
+		{
+			country : "mx",
+			product : "MiniMed™ 670G",
+		},
+		{
+			country : "pa",
+			product : "MiniMed™ 780G",
+		},
+		{
+			country : "pr",
+			product : "MiniMed™ 770G",
+		},
+		{
+			country : "",
+			product : "MiniMed™ 670G",
+		},
+	]
+	return informationByCountry.find( x => x.country == country).product;
+}
+
+export const showResults = async (currentCountry) => {
 	const answersList = JSON.parse(localStorage.getItem('answersQuiz'));
 	// console.log("RESULTADOS: ", answersList);
 	const resultsList = await loadResultFromBd();
 	const result = processResults(answersList);
-
-	renderResultsUI(result, resultsList);
+	console.log("COUNTRY: ", currentCountry);
+	renderResultsUI(result, resultsList, currentCountry);
 
 	quizFormCuidadores.addEventListener('submit', (e) => {
 		e.preventDefault();
