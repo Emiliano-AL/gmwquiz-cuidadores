@@ -2,9 +2,10 @@
 const titleResult = document.getElementById('titleResult');
 const paragraphCard = document.getElementById('paragraphCard');
 const imageCard = document.getElementById('imageCard');
-// const mainProduct = document.getElementsByClassName('main-product');
+const listImgProduct = document.getElementsByClassName('main-product');
 const quizFormCuidadores = document.getElementById('quiz-cuidadores');
-const nameMedtronicProduct = document.getElementById('nameMedtronicProduct');
+const listNameMdetronics = document.getElementsByClassName('nameMedtronicProduct');
+const listQuestionTitle = document.getElementsByClassName('questionTitle');
 
 const isMailValid = (valor) => {
 	const re=/^([\da-z_\.-]+)@([\da-z\.-]+)\.([a-z\.]{2,6})$/
@@ -85,11 +86,25 @@ const processResults = (listAnswers) => {
 	return maxResult.name;
 }
 
-const renderResultsUI = (typeResult, listResults, country) => {
+const renderResultsUI = (typeResult, listResults, country, isInPen) => {
 	const resultInfo = listResults.find( x => x.name === typeResult);
-	// console.log(resultInfo);
-	nameMedtronicProduct.textContent = infoByCountry(country);
 
+	if(country === "cl" && isInPen){
+		Array.prototype.forEach.call(listQuestionTitle, (element) => {
+			element.textContent = "InPen es el único sistema inteligente que combina una pluma de insulina reutilizable con Bluetooth® y una aplicación móvil intuitiva para ayudar a las personas con diabetes a administrar la cantidad correcta de insulina en el momento justo.";
+		});
+		Array.prototype.forEach.call(listImgProduct, (element) => {
+			element.src = `images/inpen.png`;
+		});
+		Array.prototype.forEach.call(listNameMdetronics, (element) => {
+			element.textContent = "Sistema Inpen ™";
+		});
+	}else {
+		const nameProd = infoByCountry(country);
+		Array.prototype.forEach.call(listNameMdetronics, (element) => {
+			element.textContent = nameProd;
+		});
+	}
 	imageCard.src = `./images/${resultInfo.image}.png`;
 	titleResult.textContent = resultInfo.title;
 	paragraphCard.textContent = resultInfo.paragraph;
@@ -138,8 +153,14 @@ export const showResults = async (currentCountry) => {
 	// console.log("RESULTADOS: ", answersList);
 	const resultsList = await loadResultFromBd();
 	const result = processResults(answersList);
-	console.log("COUNTRY: ", currentCountry);
-	renderResultsUI(result, resultsList, currentCountry);
+	console.log("answersList: ", answersList);
+
+	let isInPen = false;
+	//Solo para chile
+	if(currentCountry == "cl")
+		isInPen = answersList.some( x => x.answer === "inpen");;
+
+	renderResultsUI(result, resultsList, currentCountry, isInPen);
 
 	quizFormCuidadores.addEventListener('submit', (e) => {
 		e.preventDefault();

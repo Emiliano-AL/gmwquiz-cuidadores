@@ -128,7 +128,7 @@
 			{
 				"id": "116-c",
 				"content": "Mi hijo desarrolló diabetes T2 y buscamos nuevos tramientos",
-				"weight": "c"
+				"weight": "inpen"
 			},
 			{
 				"id": "116-d",
@@ -181,7 +181,7 @@
 			},
 			{
 				"id": "118-d",
-				"content": "No cuento con ninguno de los 2, asumo todos los gastos",
+				"content": "No cuento con ninguno de los dos, asumo todos los gastos",
 				"weight": "d"
 			}
 		]
