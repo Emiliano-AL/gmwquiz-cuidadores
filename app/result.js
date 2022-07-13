@@ -114,7 +114,8 @@ const infoByCountry = (country) => {
 	const informationByCountry = [
 		{
 			country : "ar",
-			product : "MiniMed™ 670G",
+			// product : "MiniMed™ 670G",
+			product : "MiniMed™ 780G",
 		},
 		{
 			country : "br",
