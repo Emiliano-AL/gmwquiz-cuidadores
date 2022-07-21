@@ -109,7 +109,7 @@
 					</div>
 					<div class="mb-2">
 						<label for="email" class="form-label">Correo electrónico*</label>
-						<input type="email" class="form-control" id="email">
+						<input type="email" name="Correo electrónico*" class="form-control" id="email">
 					</div>
 					<div class="mb-2">
 						<label for="contactme" class="form-label">¿Cómo prefieres ser contactado?*</label>
@@ -190,6 +190,13 @@
 						</label>
 					</div>
 
+					<input type="hidden" name="lead_type" value="lead" id="lead_type">
+					<input type="hidden" name="source" value="" id="source">
+					<input type="hidden" name="campaign" value="" id="campaign">
+					<input type="hidden" name="medium" value="" id="medium">
+					<input type="hidden" name="content" value="" id="content">
+					<input type="hidden" name="utm" value="" id="utm">
+					<input type="hidden" name="pefil" id="perfil">
 					<div class="d-flex justify-content-center">
 						<button id="sendInfo" class="btn btn-secondary-medtronic btn-send mt-md-5 mt-3">
 							<span>Enviar</span>

@@ -10,7 +10,16 @@ window.onload = async () => {
 	let pathCountry = (window.location.pathname.slice(1)).split('/')[1];
 	let currentCountry = pathCountry ? (pathCountry).split("-").pop() : "";
 
+	if(currentPage === "index" || currentPage === ""){
+		const startQuizBtn = document.getElementById('startQuizbtn');
+		const queryString = window.location.search;
+		startQuizBtn.href = `./quiz.html${queryString}`;
+	}
+
 	if(currentPage === "quiz"){
+		const showResultsBtn = document.getElementById('showResults');
+		const queryString = window.location.search;
+		showResultsBtn.href = `./results.html${queryString}`;
 		startQuiz();
 	}
 

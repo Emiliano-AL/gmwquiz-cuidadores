@@ -7,6 +7,14 @@ const quizFormCuidadores = document.getElementById('quiz-cuidadores');
 const listNameMdetronics = document.getElementsByClassName('nameMedtronicProduct');
 const listQuestionTitle = document.getElementsByClassName('questionTitle');
 
+const hddnLeadType = document.getElementById('lead_type');
+const hddnSource = document.getElementById('source');
+const hddnCampaign = document.getElementById('campaign');
+const hddnMedium = document.getElementById('medium');
+const hddnContent = document.getElementById('content');
+const hddnUtm = document.getElementById('utm');
+const hddnPerfil = document.getElementById('perfil');
+
 const isMailValid = (valor) => {
 	const re=/^([\da-z_\.-]+)@([\da-z\.-]+)\.([a-z\.]{2,6})$/
 	if(!re.exec(valor))
@@ -19,7 +27,7 @@ const handleSendDataForm = (dataForm) => {
 	const object = {};
 	// dataForm.append('landing', nameLanding);
 	dataForm.forEach((value, key) => object[key] = value);
-	if(!isMailValid(object.email)){
+	if(!isMailValid(object['Correo electrónico*'])){
 		Swal.fire({
 			icon: 'error',
 			title: 'Mail no válido',
@@ -39,10 +47,22 @@ const handleSendDataForm = (dataForm) => {
 		.then(function (res) {
 			// console.log(res);
 			if (res.status) {
+				if(hddnSource.value === "Facebook" || hddnSource.value === "facebook"){
+					if(hddnLeadType.value === "lead"){
+						fbq('trackCustom', 'LeadBomba770G');
+						fbq('trackCustom', 'LeadCuidadoresAR');
+						fbq('trackCustom', 'ARBomba670');
+					}else{
+						fbq('trackCustom', 'ContactCuidadoresAR');
+            fbq('trackCustom', 'ARBomba670Contact');
+					}
+				}
+
 				Swal.fire({
 					position: 'top-end',
 					icon: 'success',
-					title: 'Hemos recibido tus datos',
+					title: '¡Gracias por tu interés!',
+					text: 'Hemos recibido tus datos. Te contactaremos a la brevedad',
 					showConfirmButton: false,
 					timer: 2500
 				});
@@ -83,11 +103,27 @@ const processResults = (listAnswers) => {
 	const maxval = resultsByAns.reduce((acc, r) => acc = acc > r.total ? acc : r.total, 0);
 	const maxResult = resultsByAns.find( x => x.total === maxval);
 	// console.log("Resultados: ", maxval);
+
 	return maxResult.name;
 }
 
 const renderResultsUI = (typeResult, listResults, country, isInPen) => {
 	const resultInfo = listResults.find( x => x.name === typeResult);
+	hddnPerfil.value = resultInfo.title;
+	switch (typeResult) {
+		case 'result_1':
+			fbq('trackCustom', 'Quiz Tipo A');
+			fbq('trackCustom', 'CuidadoresQuizTipoA_AR');
+			break;
+		case 'result_2':
+			fbq('trackCustom', 'Quiz Tipo B');
+			fbq('trackCustom', 'CuidadoresQuizTipoB_AR');
+			break;
+		case 'result_3':
+			fbq('trackCustom', 'Quiz Tipo C');
+			fbq('trackCustom', 'CuidadoresQuizTipoC_AR');
+			break;
+	}
 
 	if(country === "cl" && isInPen){
 		Array.prototype.forEach.call(listQuestionTitle, (element) => {
@@ -108,6 +144,19 @@ const renderResultsUI = (typeResult, listResults, country, isInPen) => {
 	imageCard.src = `./images/${resultInfo.image}.png`;
 	titleResult.textContent = resultInfo.title;
 	paragraphCard.textContent = resultInfo.paragraph;
+}
+
+const setHiddenInformation = (country) => {
+	const queryString = window.location.search;
+	console.log(queryString);
+	const urlParams = new URLSearchParams(queryString);
+
+	hddnLeadType.value = "lead";
+	hddnSource.value =  urlParams.get('utm_source');
+	hddnCampaign.value =  urlParams.get('utm_campaign');
+	hddnMedium.value =  urlParams.get('utm_medium');
+	hddnContent.value =  urlParams.get('utm_content');
+	hddnUtm.value = window.location.href;
 }
 
 const infoByCountry = (country) => {
@@ -155,7 +204,7 @@ export const showResults = async (currentCountry) => {
 	const resultsList = await loadResultFromBd();
 	const result = processResults(answersList);
 	console.log("answersList: ", answersList);
-
+	setHiddenInformation(currentCountry);
 	let isInPen = false;
 	//Solo para chile
 	if(currentCountry == "cl")
